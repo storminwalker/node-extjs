@@ -1,19 +1,15 @@
 {
   "author": "Craig Walker <craig.walker@me.com>",
   "name": "node-extjs",
-  "main": "./index.js",
+  "main": "index",
+  "homepage": "https://github.com/storminwalker/node-extjs",
   "description": "ExtJS module for Node",
-  "version": "0.9.1",
-  "directories" : {
-	"examples" : "./examples"
-  },
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/storminwalker/node-extjs"
   },
   "engines": {
     "node": ">=0.4.0"
-  },
-  "dependencies": {},
-  "devDependencies": {}
+  }
 }

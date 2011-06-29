@@ -62,4 +62,4 @@ var injectExtJS = function(fileList){
 
 injectExtJS(fileList);
 
-console.log("ExtJS 4.0 loaded");
+console.log(String.format("ExtJS {0} loaded", Ext.getVersion()));
