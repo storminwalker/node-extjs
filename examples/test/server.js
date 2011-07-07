@@ -23,3 +23,21 @@ yada.on({
 });
 
 console.log(yada.getFoo());
+
+var callbackTest = function() {
+	console.log("callbacked");
+	console.log(this);
+	console.log("callbacked end");
+}
+
+Ext.callback(callbackTest, yada);
+
+
+var bindTest = function() {
+	console.log("binding");
+	console.log(this);
+	console.log("binding end");
+}
+
+Ext.bind(bindTest, yada)();
+
