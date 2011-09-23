@@ -1,43 +1,36 @@
-require('./node-extjs');
-require('./ext.test');
 
-console.log(Ext.getVersion().version);
+require.paths.unshift(__dirname);
+require.paths.unshift(__dirname + "./../../../node-extjs");
 
-console.log(new ext.test());
+require("node-extjs");
 
-console.log(new ext.test({
-	listeners: {
-		"test": function() {
-			console.log("yada");
-		}
-	}
-}).getFoo());
-
-var yada = Ext.create("ext.test");
-console.log(yada);
-
-yada.on({
-	test: function() {
-		console.log("yada again");
-	}
+Ext.Loader.setConfig({
+      enabled: true,
+      paths: {
+      	Examples: __dirname
+      }
 });
 
-console.log(yada.getFoo());
+Ext.require("Examples.models.User");
 
-var callbackTest = function() {
-	console.log("callbacked");
-	console.log(this);
-	console.log("callbacked end");
-}
+var user = Ext.create("Examples.models.User", {
+    name : 'Conan',
+    age  : 24,
+    phone: '555-555-5555'
+});
 
-Ext.callback(callbackTest, yada);
+user.changeName();
 
+console.log(user.get('name')); //returns "Conan The Barbarian"
 
-var bindTest = function() {
-	console.log("binding");
-	console.log(this);
-	console.log("binding end");
-}
+user.posts().add({
+	body: "This is a test"
+});
 
-Ext.bind(bindTest, yada)();
+console.log(user.getAssociatedData());
+
+var errors = user.validate();
+
+console.log(typeof errors);
+
 

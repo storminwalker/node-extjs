@@ -1,6 +1,4 @@
 
-Ext.ns("ext");
-
 Ext.define("ext.test", {
 	extend: "Ext.util.Observable",
     

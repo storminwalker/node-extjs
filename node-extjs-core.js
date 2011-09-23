@@ -1,10 +1,8 @@
-var fs = require("fs");
 
-var window = {
-    status: __defineSetter__("status", function(debugStatusMsg){
-        console.log(debugStatusMsg);
-    })
-}
+require.paths.unshift(__dirname);
+require.paths.unshift(__dirname + "/lib");
+
+var utils = require("utils");
 
 var fileList = [
 	"/extjs/src/core/src/Ext.js",
@@ -17,6 +15,7 @@ var fileList = [
 	"/extjs/src/core/src/lang/Date.js",
 	"/extjs/src/core/src/lang/Object.js",
 	"/extjs/src/core/src/lang/Function.js",
+	"/extjs/src/core/src/lang/Error.js",
 
 	"/extjs/src/core/src/class/Base.js",
 	"/extjs/src/core/src/class/Class.js",
@@ -40,26 +39,20 @@ var fileList = [
 	"/extjs/src/util/MixedCollection.js",
 	"/extjs/src/util/HashMap.js",
 	"/extjs/src/util/Inflector.js",
-	
+	"/extjs/src/util/Grouper.js",
+		
 	"/extensions/Math.js",
 	"/extensions/String.js",
 	"/extensions/Guid.js",
 	"/extensions/Hex.js"
 ];
 
-var extBasePath = __dirname + '/lib';
+utils.injectExtJS(fileList);
 
-var fileList = fileList.map(function(file) {
-	return extBasePath + file;
-});
-
-var injectExtJS = function(fileList){
-	fileList.forEach(function(file) {
-		//console.log(file);
-		eval(fs.readFileSync(file, encoding = "utf8"));
-	});
+var window = {
+    status: __defineSetter__("status", function(debugStatusMsg){
+        console.log(debugStatusMsg);
+    })
 }
 
-injectExtJS(fileList);
-
-console.log(String.format("ExtJS {0} loaded", Ext.getVersion()));
+console.log(String.format("ExtJS {0} - core loaded", Ext.getVersion()));
