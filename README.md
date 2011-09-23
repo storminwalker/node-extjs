@@ -1,3 +1,5 @@
+node-extjs
+==========
 
 Sencha's (http://www.sencha.com) ExtJS 4 library running under NodeJS (http://www.nodejs.org)
 
@@ -11,19 +13,23 @@ This utilizes Node's built-in CommonJS loader system to properly load the necess
 Includes 2 different implementations:
 
 node-extjs-core: just the core library
+
 node-extjs: the core library plus the models, controllers, stores, data access stuff
 
-Installation:
+Installation
+------------
 
-npm install node-extjs
+	npm install node-extjs
 
-Usage for just core: 
+Usage for core
+--------------
 
 	require("node-extjs-core");
 
 	console.log(Ext.getVersion().version);
 
-Usage for default: 
+Usage for extended (default)
+----------------------------
 
 	require("node-extjs");
 
