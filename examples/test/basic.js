@@ -45,3 +45,5 @@ var bindTest = function() {
 }
 
 Ext.bind(bindTest, yada)();
+
+console.log(Guid.newGuid().toString());
