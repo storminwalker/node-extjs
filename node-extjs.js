@@ -60,6 +60,8 @@ var fileList = [
 	"/extjs/src/data/Store.js",
 	"/extjs/src/data/JsonStore.js",
 	
+	"/extensions/Ext.Component.js", // stub out Ext.Component for EventBus - not required to NodeJS ExtJS
+	
 	"/extjs/src/app/EventBus.js",
 	"/extjs/src/app/Controller.js"
 ];
