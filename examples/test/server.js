@@ -11,8 +11,6 @@ Ext.Loader.setConfig({
       }
 });
 
-//Ext.require("Examples.models.User");
-
 var user = Ext.create("Examples.models.User", {
     name : 'Conan',
     age  : 24,
