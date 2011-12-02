@@ -1,8 +1,5 @@
 
-require.paths.unshift(__dirname);
-require.paths.unshift(__dirname + "/lib");
-
-var utils = require("utils");
+var utils = require("./lib/utils");
 
 var fileList = [
 	"/extjs/src/core/src/Ext.js",

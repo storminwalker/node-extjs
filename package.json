@@ -4,12 +4,12 @@
   "main": "node-extjs",
   "homepage": "https://github.com/storminwalker/node-extjs",
   "description": "ExtJS module for Node",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/storminwalker/node-extjs"
   },
   "engines": {
-    "node": ">=0.4.0"
+    "node": ">=0.6.0"
   }
 }

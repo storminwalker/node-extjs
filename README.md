@@ -19,10 +19,14 @@ node-extjs: the core library plus the models, controllers, stores, data access s
 Installation
 ------------
 
+(Requires NodeJS 0.6.x)
+
 	npm install node-extjs
 
 Usage for core
 --------------
+
+(Requires NodeJS 0.6.x)
 
 	require("node-extjs-core");
 

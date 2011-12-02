@@ -1,9 +1,7 @@
 
-require.paths.unshift(__dirname);
+require("./node-extjs-core");
 
-require("node-extjs-core");
-
-var utils = require("utils");
+var utils = require("./lib/utils");
 
 var fileList = [
 	"/extjs/src/data/Connection.js",

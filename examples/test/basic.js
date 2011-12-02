@@ -1,11 +1,15 @@
-require.paths.unshift(__dirname);
-require.paths.unshift(__dirname + "./../../../node-extjs");
 
-require("node-extjs");
+require("./../../../node-extjs");
 
-console.log(Ext.getVersion().version);
+console.log("version?", Ext.getVersion().version);
 
-Ext.ns("ext");
+Ext.Loader.setConfig({
+      enabled: true,
+      paths: {
+      	ext: __dirname + "/ext"
+      }
+});
+
 Ext.require("ext.test");
 
 console.log(new ext.test());

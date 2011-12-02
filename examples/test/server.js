@@ -1,8 +1,5 @@
 
-require.paths.unshift(__dirname);
-require.paths.unshift(__dirname + "./../../../node-extjs");
-
-require("node-extjs");
+require("./../../../node-extjs");
 
 Ext.Loader.setConfig({
       enabled: true,
@@ -29,6 +26,8 @@ console.log(user.getAssociatedData());
 
 var errors = user.validate();
 
-console.log(typeof errors);
+errors.each(function(err) {
+	console.log(err);
+});
 
 

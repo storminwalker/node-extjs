@@ -1,0 +1,9 @@
+
+December 2, 2011
+
+- Version bump to 1.0
+- Upgraded to supported Node 0.6.x (no longer officially supports 0.4.x - but will most likely work)
+
+October 21, 2011
+
+- Upgraded ExtJS library to 4.07
