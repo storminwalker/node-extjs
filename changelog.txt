@@ -1,3 +1,10 @@
+November 26, 2014
+
+- Upgraded ExtJS library to 4.2.1:
+ - lib/extjs/src directory is complete-copy paste of Ext Js 4.2.1.883. Except 2 lines of code had to move in lib/extjs/src/Ext.js (see code comments)
+ - Added stringdom dependency and created window, document and navigator globals to allow the Loader and EventManager
+- Version bump to 4.2.1 (In sync with Ext JS version)
+- Removed requirement for node version < 0.7.0
 
 December 2, 2011
 
