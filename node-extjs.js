@@ -44,9 +44,10 @@ var fileList = [
 	"/extjs/src/data/IdGenerator.js",
 	"/extjs/src/data/SequentialIdGenerator.js",
 
-	"/extjs/src/data/Association.js",
-	"/extjs/src/data/BelongsToAssociation.js",
-	"/extjs/src/data/HasManyAssociation.js",
+	"/extjs/src/data/association/Association.js",
+	"/extjs/src/data/association/BelongsTo.js",
+	"/extjs/src/data/association/HasMany.js",
+	"/extjs/src/data/association/HasOne.js",
 
 	"/extjs/src/ModelManager.js",
 

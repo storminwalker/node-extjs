@@ -1,12 +1,11 @@
 node-extjs
 ==========
 
-Sencha's (http://www.sencha.com) ExtJS 4 library running under NodeJS (http://www.nodejs.org)
+Sencha's (http://www.sencha.com) ExtJS 4.2.1 library running under NodeJS (http://www.nodejs.org)
 
 Only includes those objects and components necessary to use ExtJS as a core library with Node.
 
-Also includes some custom extensions to ExtJS to further enhance the library. These are slightly opinionated 
-but work.
+Also includes some custom extensions to ExtJS to further enhance the library. These are slightly opinionated but work.
 
 This utilizes Node's built-in CommonJS loader system to properly load the necessary ExtJS source files. This retains the full stack trace in errors (other implementations have used eval to load the library).
 
